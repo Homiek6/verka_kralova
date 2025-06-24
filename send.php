@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = htmlspecialchars(trim($_POST["email"]));
   $message = nl2br(htmlspecialchars(trim($_POST["message"]))); 
 
-  $to = "vystr@email.cz";
+  $to = "vera.kralova@applifting.cz";
   $subject = "📬 Nová zpráva z kontaktního formuláře";
   $headers = "MIME-Version: 1.0\r\n";
   $headers .= "Content-Type: text/html; charset=UTF-8\r\n";

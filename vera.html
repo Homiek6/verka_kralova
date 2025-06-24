@@ -114,12 +114,13 @@
 <body class="bg-gradient-to-br from-indigo-50 via-white to-pink-50 text-gray-800 font-sans">
   <header class="fixed w-full top-0 left-0 bg-white/80 backdrop-blur-sm shadow-md z-50">
     <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <div class="flex items-center gap-3">
-        <div class="w-8 h-8 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg">
-          <span class="text-white font-bold">V</span>
-        </div>
-        <span class="text-xl font-extrabold tracking-tight">Věra Králová</span>
-      </div>
+      <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition">
+  <div class="w-8 h-8 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg">
+    <span class="text-white font-bold">V</span>
+  </div>
+  <span class="text-xl font-extrabold tracking-tight text-gray-800">Věra Králová</span>
+</a>
+
       <nav class="hidden md:flex space-x-6 text-sm font-medium">
         <a href="#sluzby" class="relative hover:text-pink-500 transition group">
           Služby
@@ -127,10 +128,6 @@
         </a>
         <a href="#o-mne" class="relative hover:text-pink-500 transition group">
           O mně
-          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-pink-500 transition-all group-hover:w-full"></span>
-        </a>
-        <a href="#reference" class="relative hover:text-pink-500 transition group">
-          Reference
           <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-pink-500 transition-all group-hover:w-full"></span>
         </a>
         <a href="#kontakt" class="relative hover:text-pink-500 transition group">
@@ -146,7 +143,7 @@
         🧠 Leadership & Koučink
       </span>
      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-  Pomáhám růst <span class="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">spolupráce, výkonnosti a odolnosti</span> – s vnitřní rovnováhou.
+  Pomáhám rozvíjet <span class="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">spolupráci, výkonnost a odolnost</span> – s vnitřní rovnováhou.
 </h1>
 
 
@@ -245,25 +242,41 @@
     </div>
   </div>
 </section>
-<section id="o-mne" class="py-24 px-6 bg-indigo-50">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
-    <img src="vera-kralova.jpg" alt="Věra Králová"
-         class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl mx-auto md:mx-0"
-         data-animate />
-    <div class="md:w-1/2 space-y-6 text-center md:text-left" data-animate>
-      <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Jsem Věra Králová, koučka pro lídry a týmy</h2>
-      <p class="text-gray-700 text-lg leading-relaxed">
-        Jako interní koučka v Appliftingu podporuji zakladatele, C-level manažery i vývojáře. Facilitovala jsem desítky retrospektiv, řešila konflikty a tvořila leadership akademii.
+<section id="o-mne" class="py-24 px-6 bg-indigo-50 overflow-visible">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start relative overflow-visible">
+    
+    <!-- Sticky obrázek vlevo -->
+    <div class="relative">
+      <div class="sticky top-32">
+        <img src="vera-kralova.jpg" alt="Věra Králová"
+             class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover shadow-2xl mx-auto md:mx-0 transition-transform duration-500 hover:scale-105" />
+      </div>
+    </div>
+
+    <!-- Textová část s opravou ořezávání -->
+    <div class="space-y-8 max-h-[700px] overflow-y-auto overflow-x-visible pl-1 scroll-smooth relative z-10">
+      <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 opacity-0 translate-y-6 transition duration-700 ease-out" data-animate>
+        Jsem Věra Králová, koučka pro lídry a týmy
+      </h2>
+
+      <p class="text-gray-700 text-lg leading-relaxed opacity-0 translate-y-6 transition duration-700 ease-out delay-100" data-animate>
+       Jako interní koučka v Appliftingu pracuji s foundery, techleadery, teamleadery i vývojáři bez předchozí zkušenosti s vedením. Vedu retrospektivy, podporuji týmy při změně, řeším konflikty a podílím se na tvorbě leadership akademií. Opírám se o výcvik v krizové intervenci, systemickém koučování a odborné zázemí v psychologii a humanitních vědách (FHS UK).
       </p>
-      <p class="text-gray-700 text-lg leading-relaxed">
-        Mám certifikaci Axia Professional Coach, absolvovala kurz krizové intervence u Beyond Psychedelic a studuji humanitní vědy na UK. Důležitá je pro mě autenticita, vědomý dialog a dlouhodobý rozvoj.
       </p>
-      <a href="#kontakt" class="inline-block px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-full shadow-lg transition hover:scale-105">
-        Spojit se
-      </a>
+
+      <p class="text-gray-700 text-lg leading-relaxed opacity-0 translate-y-6 transition duration-700 ease-out delay-200" data-animate>
+        V práci stavím na odbornosti, respektu k individuální cestě a dlouhodobém rozvoji s jasnou strukturou. A mým cílem není „opravovat“ lidi, ale vytvářet prostor, kde se mohou zastavit, zorientovat a vědomě se rozhodnout, jak dál.
+      </p>
+
+      <div class="pt-4 opacity-0 translate-y-6 transition duration-700 ease-out delay-300" data-animate>
+        <a href="#kontakt" class="inline-block px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-full shadow-lg transform transition hover:scale-105 relative z-20">
+          Spojit se
+        </a>
+      </div>
     </div>
   </div>
 </section>
+
 <section id="vzdelani" class="py-24 px-6 bg-gradient-to-br from-indigo-50 to-purple-50">
   <div class="max-w-6xl mx-auto space-y-16" data-animate>
     <div class="text-center">
